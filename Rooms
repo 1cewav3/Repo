@@ -1,0 +1,21 @@
+print("Welcome to the Escape game!")
+print("In here you will try to escape from a place with 13 rooms.")
+print("Every room is connected to another in one way or another.")
+print("To escape you must find the secret code that allows you to escape.")
+print("Have fun!")
+print(" ")
+print("What room do you want to go to? (1-13)")
+room_choice == int(input("> "))
+
+if room_choice == 1:
+  print("You chose room 1")
+  print("In this room you will have to solve a little riddle:")
+  print("I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?")
+  answer = input("> ")
+  if answer == "echo":
+    print("You solved it!")
+    print("Here is a clue to help you find the code:")
+    print("Room 3 contains a dangerous challenge, but a big reward.")
+    print("I suggest going through room 4 before.")
+elif room_choice == 2:
+  
