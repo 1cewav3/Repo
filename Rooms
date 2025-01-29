@@ -5,36 +5,62 @@ print("To escape you must find the secret code that allows you to escape.")
 print("Have fun!")
 print(" ")
 print("What room do you want to go to? (1-13)")
-room_choice == int(input("> "))
+room_choice = int(input("> "))
 
-if room_choice == 1:
-  print("You chose room 1")
-  print("In this room you will have to solve a little riddle:")
-  print("I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?")
-  answer = input("> ")
-  if answer == "echo":
-    print("You solved it!")
-    print("Here is a clue to help you find the code:")
-    print("Room 3 contains a dangerous challenge, but a big reward.")
-    print("I suggest going through room 4 before.")
-elif room_choice == 2:
-  print("This room is going to help you")
-  print("Further on you will face a fierce monster,")
-  print("And only the unexpected answer will save you")
+while True:
+    if room_choice == 1:
+      print("You chose room 1")
+      print("In this room you will have to solve a little riddle:")
+      print("I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?")
+      answer = input("> ")
+      if answer == "echo":
+        print("You solved it!")
+        print("Here is a clue to help you find the code:")
+        print("Room 3 contains a dangerous challenge, but a big reward.")
+        print("I suggest going through room 4 before.")
+        room_choice = int(input("> "))
+    elif room_choice == 2:
+      print("This room is going to help you")
+      print("Further on you will face a fierce monster,")
+      print("And only the unexpected answer will save you")
+      room_choice = int(input("> "))
 
-elif room_choice == 3:
-  print("As you enter the pitch black room,")
-  print("The door suddenly closes behind you leaving you alone in the darkness.")
-  print("As you light a match to see your surroundings")
-  print("you realize you are not alone.")
-  print("A big black monster rises from the floor, and asks you a question:")
-  print("Im tall when I'm young and short when I'm old.")
-  print("What am I?")
-  riddle_1 = input("> ")
-  if riddle_1 == "candle":
-    print("Yes, I am. The second number to the combination is 9. You may now leave.")
-  else:
-    print("Wrong answer. Now you die")
-    break
+    elif room_choice == 3:
+      print("As you enter the pitch black room,")
+      print("The door suddenly closes behind you leaving you alone in the darkness.")
+      print("As you light a match to see your surroundings")
+      print("you realize you are not alone.")
+      print("A big black monster rises from the floor, and asks you a question:")
+      print("Im tall when I'm young and short when I'm old.")
+      print("What am I?")
+      riddle_1 = input("> ")
+      if riddle_1 == "candle":
+        print("Yes, I am. The second number to the combination is 9. You may now leave.")
+        room_choice = int(input("> "))
+      else:
+        print("Wrong answer. Now you die")
+        exit()
 
-elif room_choice == 4
+    elif room_choice == 4:
+      print("you enetr a room and see a lion.")
+      print("You have two choices on how to proceed: ")
+      print("1. Hit the lion ")
+      print("2. Run ")
+      x = input("> ")
+      if x == "1":
+        print("Good choice. you knock out the lion and see the first number of the code: 6")
+        room_choice = int(input("> "))
+      else:
+        print("Wrong answer. YOu got killed by the lion")
+        exit()
+
+    elif room_choice == 5:
+      print("In the middle of  the room there is mushroom.")
+      print("You can eat it (1) or leave it be. What do you choose?")
+      y = input("> ")
+      if y == "1":
+        print("You start hallucinating and see a number...")
+        print("Its a 4 on the third position.")
+      else:
+        print("The mushroom releases a toxic gas and kills you.")
+        exit()
