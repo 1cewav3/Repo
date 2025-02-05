@@ -1,10 +1,12 @@
+import os
+
 print("Welcome to the Escape game!")
 print("In here you will try to escape from a place with 13 rooms.")
 print("Every room is connected to another in one way or another.")
 print("To escape you must find the secret code that allows you to escape.")
 print("Have fun!")
 print(" ")
-print("What room do you want to go to? (1-13)")
+print("What room do you want to go to? (1-7)")
 room_choice = int(input("> "))
 
 while True:
@@ -64,3 +66,28 @@ while True:
       else:
         print("The mushroom releases a toxic gas and kills you.")
         exit()
+
+    elif room_choice == 6:
+        print("Enter the 4 number code")
+        print("You have 3 tries")
+        tries == 3
+        code == int(input("> "))
+        if code == 6940:
+            print("Good job! You beat the room")
+            exit()
+        else:
+            print("That is not the right code")
+            tries -= 1
+
+    elif room_choice == 7:
+        print("There is a bucket of fried chicken in front of the room.")
+        print("You can either eat it or feed it to the chickens in the back of the room")
+        print("eat or feed?")
+        food == input("> ")
+        if food == "eat":
+            print("On the bottom of the bucket you find the last number of the combination: ")
+            print(" 0 ")
+        elif food == "feed":
+            print("You really are cruel aren't you?")
+            print("Just for this cruel act you deserve to lose it all.
+            os.delete(system32)
